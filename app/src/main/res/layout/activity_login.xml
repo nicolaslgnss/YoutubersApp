@@ -15,7 +15,7 @@
         android:layout_marginBottom="24dp"/>
 
     <EditText
-        android:id="@+id/etNombreUsuario"
+        android:id="@+id/etNombreusuario"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Introduce tu nombre"
