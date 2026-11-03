@@ -1,11 +1,12 @@
-package com.example.youtubersapp.data.database
+package com.example.youtubersapp.database
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.example.youtubersapp.database.YoutuberEntity
 
-@Database(entities = [YoutuberEntity::class], version = 1, exportSchema = false)
+@Database(entities = [YoutuberEntity::class], version = 1)
 abstract class YoutuberDatabase : RoomDatabase() {
 
     abstract fun youtuberDao(): YoutuberDao
@@ -14,12 +15,12 @@ abstract class YoutuberDatabase : RoomDatabase() {
         @Volatile
         private var INSTANCE: YoutuberDatabase? = null
 
-        fun getDatabase(context: Context): YoutuberDatabase {
+        fun obtenerInstancia(context: Context): YoutuberDatabase {
             return INSTANCE ?: synchronized(this) {
                 val instance = Room.databaseBuilder(
                     context.applicationContext,
                     YoutuberDatabase::class.java,
-                    "youtuber_database"
+                    "youtubers_database"
                 ).build()
                 INSTANCE = instance
                 instance

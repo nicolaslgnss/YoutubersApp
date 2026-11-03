@@ -10,6 +10,10 @@ android {
     namespace = "com.example.youtubersapp"
     compileSdk = 37
 
+    buildFeatures {
+        viewBinding = true
+    }
+
     defaultConfig {
         applicationId = "com.example.youtubersapp"
         minSdk = 26
@@ -57,4 +61,5 @@ dependencies {
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
     implementation("com.squareup.picasso:picasso:2.8")
+    implementation("io.coil-kt:coil:2.6.0")
 }

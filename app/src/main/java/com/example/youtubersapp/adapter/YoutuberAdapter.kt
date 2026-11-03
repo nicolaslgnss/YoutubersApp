@@ -34,7 +34,7 @@ class YoutuberAdapter(private val listaYoutubers: List<Youtuber>) :
         holder.txtSuscriptores.text = youtuber.suscriptores
         holder.imgFoto.setImageResource(youtuber.fotoResId)
 
-        // Al hacer clic, lanza directamente el navegador o la app de YouTube con el enlace del canal
+        // Al hacer clic, abre directamente el canal de YouTube en el navegador o la app oficial
         holder.itemView.setOnClickListener {
             val context = holder.itemView.context
             val intent = Intent(Intent.ACTION_VIEW, Uri.parse(youtuber.canalUrl))

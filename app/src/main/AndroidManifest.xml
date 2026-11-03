@@ -25,14 +25,19 @@
             </intent-filter>
         </activity>
 
-        <!-- MainActivity con la ruta completa -->
+        <!-- MainActivity -->
         <activity
             android:name="com.example.youtubersapp.activity.MainActivity"
             android:exported="false" />
 
-        <!-- DetalleActivity con la ruta completa -->
+        <!-- DetalleActivity -->
         <activity
             android:name="com.example.youtubersapp.activity.DetalleActivity"
+            android:exported="false" />
+
+        <!-- PerfilActivity -->
+        <activity
+            android:name="com.example.youtubersapp.activity.PerfilActivity"
             android:exported="false" />
 
     </application>

@@ -1,14 +1,14 @@
-package com.example.youtubersapp.data.database
+package com.example.youtubersapp.database
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-@Entity(tableName = "youtubers_table")
+@Entity(tableName = "youtubers_tabla")
 data class YoutuberEntity(
     @PrimaryKey(autoGenerate = true)
-    val id: Int = 0,
+    val id: Long = 0,
     val name: String,
     val description: String,
-    val imageUrl: String,
+    val canalUrl: String,
     val subscribers: String
 )

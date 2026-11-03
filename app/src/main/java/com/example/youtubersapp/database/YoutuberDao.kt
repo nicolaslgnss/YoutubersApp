@@ -1,20 +1,16 @@
-package com.example.youtubersapp.data.database
+package com.example.youtubersapp.database
 
 import androidx.room.Dao
-import androidx.room.Delete
 import androidx.room.Insert
-import androidx.room.OnConflictStrategy
 import androidx.room.Query
+import com.example.youtubersapp.database.YoutuberEntity
 
 @Dao
 interface YoutuberDao {
 
-    @Query("SELECT * FROM youtubers_table")
-    suspend fun getAllYoutubers() : List<YoutuberEntity>
+    @Query("SELECT * FROM youtubers_tabla")
+    suspend fun obtenerTodos(): List<YoutuberEntity>
 
-    @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insertYoutuber(youtuber: YoutuberEntity)
-
-    @Delete
-    suspend fun deleteYoutuber(youtuber: YoutuberEntity)
+    @Insert
+    suspend fun insertarYoutuber(youtuber: YoutuberEntity)
 }
