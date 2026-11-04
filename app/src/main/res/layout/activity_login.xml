@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondo_degradado"
+    android:background="@drawable/fondo_gamer"
     android:gravity="center"
     android:padding="32dp">
 
@@ -19,6 +20,9 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilNombreUsuario"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:boxBackgroundColor="#B3000000"
+        app:boxStrokeColor="@android:color/white"
+        app:hintTextColor="@android:color/white"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="24dp"
@@ -26,10 +30,12 @@
         android:hint="Introduce tu nombre">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etNombreusuario"
+            android:id="@+id/etNombreUsuario"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white"
             android:maxLines="1" />
 
     </com.google.android.material.textfield.TextInputLayout>

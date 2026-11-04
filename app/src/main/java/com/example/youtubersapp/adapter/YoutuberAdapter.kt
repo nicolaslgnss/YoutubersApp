@@ -1,7 +1,6 @@
 package com.example.youtubersapp.adapter
 
 import android.content.Intent
-import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,6 +8,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.youtubersapp.R
+import com.example.youtubersapp.activity.DetalleActivity
 import com.example.youtubersapp.database.Youtuber
 
 class YoutuberAdapter(private val listaYoutubers: List<Youtuber>) :
@@ -34,10 +34,19 @@ class YoutuberAdapter(private val listaYoutubers: List<Youtuber>) :
         holder.txtSuscriptores.text = youtuber.suscriptores
         holder.imgFoto.setImageResource(youtuber.fotoResId)
 
-        // Al hacer clic, abre directamente el canal de YouTube en el navegador o la app oficial
+        // Al hacer clic en la tarjeta, abrimos la DetalleActivity pasando los datos
         holder.itemView.setOnClickListener {
             val context = holder.itemView.context
-            val intent = Intent(Intent.ACTION_VIEW, Uri.parse(youtuber.canalUrl))
+            val intent = Intent(context, DetalleActivity::class.java).apply {
+                putExtra("YOUTUBER_NOMBRE", youtuber.nombre)
+                putExtra("YOUTUBER_CATEGORIA", youtuber.categoria)
+                putExtra("YOUTUBER_SUSCRIPTORES", youtuber.suscriptores)
+                putExtra("YOUTUBER_FOTO", youtuber.fotoResId)
+                putExtra("YOUTUBER_URL", youtuber.canalUrl)
+                putExtra("YOUTUBER_DESCRIPCION", youtuber.descripcion)
+                putExtra("YOUTUBER_PAIS", youtuber.pais)
+                putExtra("YOUTUBER_ANIO", youtuber.anioCreacion)
+            }
             context.startActivity(intent)
         }
     }

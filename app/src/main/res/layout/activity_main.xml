@@ -2,19 +2,32 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:background="#121212">
 
     <!-- Botón para cerrar sesión que abrirá el AlertDialog -->
     <Button
-        android:id="@+id/btnCerrarSesion"
+        android:id="@+id/btnCerrarSesión"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Cerrar Sesión"
         android:layout_gravity="end"
         android:layout_marginBottom="8dp"/>
 
-    <!-- Tu RecyclerView existente -->
+    <!-- Barra de búsqueda en tiempo real -->
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:background="#1E1E1E"
+        android:queryHint="Buscar Youtuber..."
+        app:iconifiedByDefault="false"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark" />
+
+    <!-- Tu recyclerView existente -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewYoutubers"
         android:layout_width="match_parent"

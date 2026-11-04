@@ -33,12 +33,24 @@
         <!-- DetalleActivity -->
         <activity
             android:name="com.example.youtubersapp.activity.DetalleActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
 
         <!-- PerfilActivity -->
         <activity
             android:name="com.example.youtubersapp.activity.PerfilActivity"
             android:exported="false" />
+
+        <!-- AboutActivity (Pantalla Acerca de) -->
+        <activity
+            android:name=".activity.AboutActivity"
+            android:exported="false" />
+
+        <!-- SettingsActivity (Pantalla de Ajustes) -->
+        <activity
+            android:name=".activity.SettingsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
 
     </application>
 

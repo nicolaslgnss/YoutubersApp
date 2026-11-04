@@ -2,22 +2,141 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:background="#121212">
 
-    <!-- Reproductor de vídeo -->
-    <VideoView
-        android:id="@+id/videoViewCanal"
+    <!-- Barra superior / Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarDetalle"
         android:layout_width="match_parent"
-        android:layout_height="250dp" />
+        android:layout_height="?attr/actionBarSize"
+        android:background="#1E1E1E"
+        app:titleTextColor="@android:color/white" />
 
-    <!-- Nombre del canal que se rellenará automáticamente -->
-    <TextView
-        android:id="@+id/textNombreCanal"
+    <!-- Contenido Principal con Scroll para pantallas pequeñas -->
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="22sp"
-        android:textStyle="bold"
-        android:layout_marginTop="16dp" />
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:gravity="center_horizontal">
+
+            <!-- Avatar o foto del YouTuber -->
+            <ImageView
+                android:id="@+id/ivDetalleFoto"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="12dp"
+                android:scaleType="centerCrop" />
+
+            <!-- Nombre del YouTuber -->
+            <TextView
+                android:id="@+id/tvDetalleNombre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:layout_marginBottom="4dp"/>
+
+            <!-- Categoría -->
+            <TextView
+                android:id="@+id/tvDetalleCategoria"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textColor="#00E676"
+                android:layout_marginBottom="6dp"/>
+
+            <!-- Suscriptores -->
+            <TextView
+                android:id="@+id/tvDetalleSuscriptores"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="#B0BEC5"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- TARJETA 1: Descripción del canal -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:cardBackgroundColor="#1E1E1E"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp">
+
+                <TextView
+                    android:id="@+id/tvDetalleDescripcion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:textSize="14sp"
+                    android:textColor="#E0E0E0"
+                    android:gravity="center"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- TARJETA 2: País y Año de creación agrupados -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                app:cardBackgroundColor="#1E1E1E"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/tvDetallePais"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="#90CAF9"
+                        android:layout_marginBottom="6dp"/>
+
+                    <TextView
+                        android:id="@+id/tvDetalleAnio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="#90CAF9"/>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Botón para visitar el canal -->
+            <Button
+                android:id="@+id/btnVisitarCanal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Visitar Canal en YouTube"
+                android:backgroundTint="#FF0000"
+                android:textColor="@android:color/white"
+                android:layout_marginBottom="8dp"/>
+
+            <!-- Botón para compartir el canal -->
+            <Button
+                android:id="@+id/btnCompartirCanal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Compartir Canal"
+                android:backgroundTint="#333333"
+                android:textColor="@android:color/white"/>
+
+        </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>
