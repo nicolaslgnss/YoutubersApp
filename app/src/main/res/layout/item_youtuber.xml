@@ -12,7 +12,10 @@
     app:cardBackgroundColor="#1E1E1E"
     app:strokeColor="#333333"
     app:strokeWidth="1dp"
-    app:cardElevation="6dp">
+    app:cardElevation="4dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -22,50 +25,61 @@
         android:gravity="center_vertical">
 
         <!-- Foto de perfil del Youtuber -->
-        <ImageView
+        <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/ivAvatar"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
             android:scaleType="centerCrop"
-            android:background="@android:color/darker_gray"/>
+            android:background="#2C2C2C"
+            app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full" />
 
-        <!-- Datos del Youtuber -->
+        <!-- Datos principales (Nombre, Categoria, Suscriptores) -->
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="vertical"
-            android:layout_marginStart="16dp">
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp">
 
             <TextView
                 android:id="@+id/tvNombre"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 android:textStyle="bold"
-                android:textColor="@android:color/white"
+                android:textColor="#FFFFFF"
                 android:maxLines="1"
                 android:ellipsize="end"/>
-            <!-- Categoria -->
+
             <TextView
                 android:id="@+id/tvCategoria"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="#00E676"
-                android:textSize="14sp"
-                android:layout_marginTop="4px"
+                android:textSize="13sp"
+                android:layout_marginTop="4dp"
                 android:maxLines="1"/>
-            <!-- Suscriptores -->
+
             <TextView
                 android:id="@+id/tvSuscriptores"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="#B0BEC5"
                 android:textSize="12sp"
-                android:textStyle="bold"
-                android:layout_marginTop="4px"/>
+                android:layout_marginTop="4dp" />
 
         </LinearLayout>
+
+        <!-- Botón de Favorito (Estrella) -->
+        <ImageView
+            android:id="@+id/btnFavorito"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@android:drawable/btn_star_big_off"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Favorito"
+            android:padding="6dp"/>
 
     </LinearLayout>
 

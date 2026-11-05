@@ -42,7 +42,7 @@ class SettingsActivity : AppCompatActivity() {
         }
     }
 
-    // Permitir volver atrás con la flecha de la barra superior
+    // Hacer que la flecha de retroceso de la barra superior funcione correctamente
     override fun onSupportNavigateUp(): Boolean {
         onBackPressedDispatcher.onBackPressed()
         return true

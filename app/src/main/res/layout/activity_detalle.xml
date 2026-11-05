@@ -2,141 +2,100 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center_horizontal"
     android:background="#121212">
 
-    <!-- Barra superior / Toolbar -->
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbarDetalle"
+    <ImageView
+        android:id="@+id/ivFotoDetalle"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/tvNombreDetalle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="12dp" />
+
+    <TextView
+        android:id="@+id/tvCategoriaDetalle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="#AAAAAA"
+        android:layout_marginTop="4dp" />
+
+    <TextView
+        android:id="@+id/tvSuscriptoresDetalle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="#AAAAAA"
+        android:layout_marginTop="2dp" />
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
         android:background="#1E1E1E"
-        app:titleTextColor="@android:color/white" />
+        android:padding="16dp"
+        android:layout_marginTop="24dp">
 
-    <!-- Contenido Principal con Scroll para pantallas pequeñas -->
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fillViewport="true">
-
-        <LinearLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="20dp"
-            android:gravity="center_horizontal">
+            android:text="País:"
+            android:textColor="#888888"
+            android:textSize="12sp" />
 
-            <!-- Avatar o foto del YouTuber -->
-            <ImageView
-                android:id="@+id/ivDetalleFoto"
-                android:layout_width="110dp"
-                android:layout_height="110dp"
-                android:layout_marginTop="4dp"
-                android:layout_marginBottom="12dp"
-                android:scaleType="centerCrop" />
+        <TextView
+            android:id="@+id/tvPaisDetalle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="2dp" />
 
-            <!-- Nombre del YouTuber -->
-            <TextView
-                android:id="@+id/tvDetalleNombre"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="24sp"
-                android:textStyle="bold"
-                android:textColor="@android:color/white"
-                android:layout_marginBottom="4dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Creado en:"
+            android:textColor="#888888"
+            android:textSize="12sp"
+            android:layout_marginTop="8dp" />
 
-            <!-- Categoría -->
-            <TextView
-                android:id="@+id/tvDetalleCategoria"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="15sp"
-                android:textColor="#00E676"
-                android:layout_marginBottom="6dp"/>
+        <TextView
+            android:id="@+id/tvAnioDetalle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="2dp" />
 
-            <!-- Suscriptores -->
-            <TextView
-                android:id="@+id/tvDetalleSuscriptores"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="14sp"
-                android:textColor="#B0BEC5"
-                android:layout_marginBottom="16dp"/>
+    </LinearLayout>
 
-            <!-- TARJETA 1: Descripción del canal -->
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="12dp"
-                app:cardBackgroundColor="#1E1E1E"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="4dp">
+    <Button
+        android:id="@+id/btnVisitarCanal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="VISITAR CANAL EN YOUTUBE"
+        android:backgroundTint="#FF0000"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="24dp" />
 
-                <TextView
-                    android:id="@+id/tvDetalleDescripcion"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="16dp"
-                    android:textSize="14sp"
-                    android:textColor="#E0E0E0"
-                    android:gravity="center"/>
-
-            </androidx.cardview.widget.CardView>
-
-            <!-- TARJETA 2: País y Año de creación agrupados -->
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="24dp"
-                app:cardBackgroundColor="#1E1E1E"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="4dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="16dp">
-
-                    <TextView
-                        android:id="@+id/tvDetallePais"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="14sp"
-                        android:textColor="#90CAF9"
-                        android:layout_marginBottom="6dp"/>
-
-                    <TextView
-                        android:id="@+id/tvDetalleAnio"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="14sp"
-                        android:textColor="#90CAF9"/>
-
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-            <!-- Botón para visitar el canal -->
-            <Button
-                android:id="@+id/btnVisitarCanal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Visitar Canal en YouTube"
-                android:backgroundTint="#FF0000"
-                android:textColor="@android:color/white"
-                android:layout_marginBottom="8dp"/>
-
-            <!-- Botón para compartir el canal -->
-            <Button
-                android:id="@+id/btnCompartirCanal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Compartir Canal"
-                android:backgroundTint="#333333"
-                android:textColor="@android:color/white"/>
-
-        </LinearLayout>
-    </ScrollView>
+    <Button
+        android:id="@+id/btnCompartirCanal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="COMPARTIR CANAL"
+        android:backgroundTint="#333333"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="12dp" />
 
 </LinearLayout>

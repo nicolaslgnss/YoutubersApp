@@ -1,12 +1,14 @@
-package com.example.youtubersapp.database
+package com.example.youtubersapp
 
 data class Youtuber(
     val nombre: String,
     val categoria: String,
     val suscriptores: String,
-    val fotoResId: Int,       // URL de la imagen en formato texto
-    val canalUrl: String,      // URL del canal de YouTube
-    val descripcion: String, // NUEVO
-    val pais: String,          // NUEVO
-    val anioCreacion: String   // NUEVO
+    val descripcion: String,
+    val pais: String,
+    val anioCreacion: Int,
+    val canalUrl: String,
+    val imagenResId: Int,
+    val colorHex: String ="#00E5FF",
+    var esFavorito: Boolean = false
 )
