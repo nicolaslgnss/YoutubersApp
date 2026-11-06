@@ -70,7 +70,7 @@ class MainActivity : AppCompatActivity() {
             Youtuber("Papi Gavi", "Fútbol / Humor", "696K", "Reacciones de fútbol con mucho humor y pasión", "España", 2019, "https://youtube.com/@papigavi", R.drawable.papigavi, colorHex = "#FFEA00"),
             Youtuber("Spursito", "Fútbol / Entretenimiento", "1.62M", "Directos, fútbol y Kings League", "España", 2015, "https://youtube.com/@spursito", R.drawable.spursito, colorHex = "#00B0FF"),
             Youtuber("Esttik Foodie", "Retos / Comida", "1.04M", "Retos de comida y grandes burradas gastronómicas", "España", 2014, "https://youtube.com/@esttikPlus", R.drawable.esttik, colorHex = "#E040FB"),
-            Youtuber("Rulas 47", "Gaming", "3.48K", "Gameplays y diversión", "España", 2017, "https://youtube.com/@rulas47", R.drawable.rulas47, colorHex = "#1DE9B6"),
+            Youtuber("Rulas 47", "Gaming", "3.48M", "Gameplays y diversión", "España", 2017, "https://youtube.com/@rulas47", R.drawable.rulas47, colorHex = "#1DE9B6"),
             Youtuber("xBuyer", "Fútbol / Entretenimiento", "6.03M", "Retos, vlogs y fútbol con su hermano", "España", 2012, "https://youtube.com/@xbuyer", R.drawable.xbuyer, colorHex = "#FFAB40"),
             Youtuber("Zona Gemelos", "Entretenimiento", "948K", "Vlogs y retos muy divertidos", "España", 2018, "https://youtube.com/@zonagemelos", R.drawable.zonagemelos, colorHex = "#EEFF41"),
             Youtuber("Ampeter", "Gaming", "6.08M", "Fortnite, Call of Duty y gameplays diarios", "España", 2012, "https://youtube.com/@ampeter", R.drawable.ampeter, colorHex = "#8BC34A"),
