@@ -1,0 +1,302 @@
+[
+  {
+    "nombre": "Mikecrack",
+    "categoria": "Animación",
+    "suscriptores": "58.7M",
+    "descripcion": "Canal de animación y gameplay",
+    "pais": "España",
+    "anioCreacion": 2015,
+    "urlCanal": "https://youtube.com/mikecrack",
+    "colorHex": "#FFEA00"
+  },
+  {
+    "nombre": "Rubius Z",
+    "categoria": "Gaming",
+    "suscriptores": "14.9M",
+    "descripcion": "Gameplay y vlogs diarios",
+    "pais": "España",
+    "anioCreacion": 2006,
+    "urlCanal": "https://youtube.com/elrubius",
+    "colorHex": "#00E5FF"
+  },
+  {
+    "nombre": "Vegetta777",
+    "categoria": "Gaming",
+    "suscriptores": "34.8M",
+    "descripcion": "Gameplays y series de Minecraft",
+    "pais": "España",
+    "anioCreacion": 2008,
+    "urlCanal": "https://youtube.com/vegetta777",
+    "colorHex": "#7C4DFF"
+  },
+  {
+    "nombre": "AuronPlay",
+    "categoria": "Comedia",
+    "suscriptores": "29.1M",
+    "descripcion": "Reacciones y humor",
+    "pais": "España",
+    "anioCreacion": 2006,
+    "urlCanal": "https://youtube.com/auronplay",
+    "colorHex": "#FF9100"
+  },
+  {
+    "nombre": "Ibai Llanos",
+    "categoria": "Streaming",
+    "suscriptores": "17.4M",
+    "descripcion": "Charlas, eventos y directos",
+    "pais": "España",
+    "anioCreacion": 2015,
+    "urlCanal": "https://youtube.com/ibai",
+    "colorHex": "#69F0AE"
+  },
+  {
+    "nombre": "TheGrefg",
+    "categoria": "Gaming",
+    "suscriptores": "19.9M",
+    "descripcion": "Directos y Fortnite",
+    "pais": "España",
+    "anioCreacion": 2012,
+    "urlCanal": "https://youtube.com/thegrefg",
+    "colorHex": "#FF3D71"
+  },
+  {
+    "nombre": "DjMaRiiO",
+    "categoria": "Deportes",
+    "suscriptores": "10.3M",
+    "descripcion": "Fútbol y EA Sports FC",
+    "pais": "España",
+    "anioCreacion": 2009,
+    "urlCanal": "https://youtube.com/djmariio",
+    "colorHex": "#00B0FF"
+  },
+  {
+    "nombre": "Lpcast",
+    "categoria": "Gaming",
+    "suscriptores": "27.9K",
+    "descripcion": "Contenido de videojuegos y Guías juegos",
+    "pais": "España",
+    "anioCreacion": 2018,
+    "urlCanal": "https://youtube.com/lpcast",
+    "colorHex": "#E040FB"
+  },
+  {
+    "nombre": "tailon124 3",
+    "categoria": "Gaming",
+    "suscriptores": "386 subs",
+    "descripcion": "Gameplay variados",
+    "pais": "España",
+    "anioCreacion": 2018,
+    "urlCanal": "https://youtube.com/tailon124",
+    "colorHex": "#1DE9B6"
+  },
+  {
+    "nombre": "nicolaslgnss",
+    "categoria": "Gaming",
+    "suscriptores": "154 subs",
+    "descripcion": "Gaming y Streaming",
+    "pais": "España",
+    "anioCreacion": 2018,
+    "urlCanal": "https://youtube.com/nicolaslgnss",
+    "colorHex": "#FFAB40"
+  },
+  {
+    "nombre": "TheNefor",
+    "categoria": "Tutoriales",
+    "suscriptores": "75 subs",
+    "descripcion": "Tutoriales y Gaming",
+    "pais": "España",
+    "anioCreacion": 2017,
+    "urlCanal": "https://youtube.com/thenefor",
+    "colorHex": "#EEFF41"
+  },
+  {
+    "nombre": "tobbalink",
+    "categoria": "Gaming / FIFA",
+    "suscriptores": "3.58M",
+    "descripcion": "Modo carrera, Ultimate Team y fútbol virtual",
+    "pais": "España",
+    "anioCreacion": 2012,
+    "urlCanal": "https://youtube.com/@tobbalink",
+    "colorHex": "#00E676"
+  },
+  {
+    "nombre": "pumsucor",
+    "categoria": "Gaming",
+    "suscriptores": "893K",
+    "descripcion": "Gameplays y vídeos divertidos de fútbol",
+    "pais": "España",
+    "anioCreacion": 2006,
+    "urlCanal": "https://youtube.com/@pumuscor",
+    "colorHex": "#FF5722"
+  },
+  {
+    "nombre": "cacho01",
+    "categoria": "Fútbol / Gaming",
+    "suscriptores": "1.87M",
+    "descripcion": "EA Sports FC, Ultimate Team y fútbol",
+    "pais": "España",
+    "anioCreacion": 2012,
+    "urlCanal": "https://youtube.com/@cachoo01",
+    "colorHex": "#FFD700"
+  },
+  {
+    "nombre": "miikelmst",
+    "categoria": "Gaming",
+    "suscriptores": "550K",
+    "descripcion": "Retos, entretenimiento y gameplays de fútbol",
+    "pais": "España",
+    "anioCreacion": 2013,
+    "urlCanal": "https://youtube.com/@miikelmst",
+    "colorHex": "#00BCD4"
+  },
+  {
+    "nombre": "Illojuan",
+    "categoria": "Streaming / Variedad",
+    "suscriptores": "2.99M",
+    "descripcion": "Directos divertidos, reacciones y juegos variados",
+    "pais": "España",
+    "anioCreacion": 2008,
+    "urlCanal": "https://youtube.com/@illojuan_",
+    "colorHex": "#7C4DFF"
+  },
+  {
+    "nombre": "ElXokas",
+    "categoria": "Streaming / Opinión",
+    "suscriptores": "2.86M",
+    "descripcion": "Charlas, directos y debate sobre actualidad",
+    "pais": "España",
+    "anioCreacion": 2007,
+    "urlCanal": "https://youtube.com/@elxokas",
+    "colorHex": "#FF3D71"
+  },
+  {
+    "nombre": "bydiegox10",
+    "categoria": "Gaming",
+    "suscriptores": "972K",
+    "descripcion": "Contenido de videojuegos y fútbol",
+    "pais": "España",
+    "anioCreacion": 2014,
+    "urlCanal": "https://youtube.com/@bydiegox10",
+    "colorHex": "#00E5FF"
+  },
+  {
+    "nombre": "Real Madrid",
+    "categoria": "Deportes / Fútbol",
+    "suscriptores": "21.6M",
+    "descripcion": "Canal oficial del club de fútbol",
+    "pais": "España",
+    "anioCreacion": 2006,
+    "urlCanal": "https://youtube.com/@realmadrid",
+    "colorHex": "#E50914"
+  },
+  {
+    "nombre": "Jordi Wild",
+    "categoria": "Podcast / Entrevistas",
+    "suscriptores": "7.41M",
+    "descripcion": "The Wild Project y entrevistas de actualidad",
+    "pais": "España",
+    "anioCreacion": 2020,
+    "urlCanal": "https://youtube.com/@TheWildProject",
+    "colorHex": "#FF9100"
+  },
+  {
+    "nombre": "Vitu",
+    "categoria": "Gaming / Fútbol",
+    "suscriptores": "1.04M",
+    "descripcion": "Modos carrera y directos de fútbol",
+    "pais": "España",
+    "anioCreacion": 2015,
+    "urlCanal": "https://youtube.com/@vituYT",
+    "colorHex": "#69F0AE"
+  },
+  {
+    "nombre": "Papi Gavi",
+    "categoria": "Fútbol / Humor",
+    "suscriptores": "696K",
+    "descripcion": "Reacciones de fútbol con mucho humor y pasión",
+    "pais": "España",
+    "anioCreacion": 2019,
+    "urlCanal": "https://youtube.com/@papigavi",
+    "colorHex": "#FFEA00"
+  },
+  {
+    "nombre": "Spursito",
+    "categoria": "Fútbol / Entretenimiento",
+    "suscriptores": "1.62M",
+    "descripcion": "Directos, fútbol y Kings League",
+    "pais": "España",
+    "anioCreacion": 2015,
+    "urlCanal": "https://youtube.com/@spursito",
+    "colorHex": "#00B0FF"
+  },
+  {
+    "nombre": "Esttik Foodie",
+    "categoria": "Retos / Comida",
+    "suscriptores": "1.04M",
+    "descripcion": "Retos de comida y grandes burradas gastronómicas",
+    "pais": "España",
+    "anioCreacion": 2014,
+    "urlCanal": "https://youtube.com/@esttikPlus",
+    "colorHex": "#E040FB"
+  },
+  {
+    "nombre": "Rulas 47",
+    "categoria": "Gaming",
+    "suscriptores": "3.48K",
+    "descripcion": "Gameplays y diversión",
+    "pais": "España",
+    "anioCreacion": 2017,
+    "urlCanal": "https://youtube.com/@rulas47",
+    "colorHex": "#1DE9B6"
+  },
+  {
+    "nombre": "xBuyer",
+    "categoria": "Fútbol / Entretenimiento",
+    "suscriptores": "6.03M",
+    "descripcion": "Retos, vlogs y fútbol con su hermano",
+    "pais": "España",
+    "anioCreacion": 2012,
+    "urlCanal": "https://youtube.com/@xbuyer",
+    "colorHex": "#FFAB40"
+  },
+  {
+    "nombre": "Zona Gemelos",
+    "categoria": "Entretenimiento",
+    "suscriptores": "948K",
+    "descripcion": "Vlogs y retos muy divertidos",
+    "pais": "España",
+    "anioCreacion": 2018,
+    "urlCanal": "https://youtube.com/@zonagemelos",
+    "colorHex": "#EEFF41"
+  },
+  {
+    "nombre": "Ampeter",
+    "categoria": "Gaming",
+    "suscriptores": "6.08M",
+    "descripcion": "Fortnite, Call of Duty y gameplays diarios",
+    "pais": "España",
+    "anioCreacion": 2012,
+    "urlCanal": "https://youtube.com/@ampeter",
+    "colorHex": "#8BC34A"
+  },
+  {
+    "nombre": "Agustin51 WORLD",
+    "categoria": "Gaming",
+    "suscriptores": "271K",
+    "descripcion": "Juegos Variados y mucho humor",
+    "pais": "España",
+    "anioCreacion": 2022,
+    "urlCanal": "https://youtube.com/@agustinWORLD",
+    "colorHex": "#FF9800"
+  },
+  {
+    "nombre": "Peereira7",
+    "categoria": "Gaming / Fútbol",
+    "suscriptores": "857K",
+    "descripcion": "Juegos variados y fortnite",
+    "pais": "España",
+    "anioCreacion": 2017,
+    "urlCanal": "https://youtube.com/@peereira",
+    "colorHex": "#607D8B"
+  }
+]

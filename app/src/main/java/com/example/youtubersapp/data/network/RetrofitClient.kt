@@ -6,7 +6,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 object RetrofitClient {
     val instance: YoutuberApiService by lazy {
         Retrofit.Builder()
-            .baseUrl("https://tu-url-de-la-api.com/") // Reemplaza con tu URL base real
+            .baseUrl("https://raw.githubusercontent.com/nicolaslgnss/YoutubersApp/main/")// Reemplaza con tu URL base real
             .addConverterFactory(GsonConverterFactory.create())
             .build()
             .create(YoutuberApiService::class.java)
