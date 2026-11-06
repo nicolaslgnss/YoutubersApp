@@ -4,11 +4,9 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 object RetrofitClient {
-    private const val BASE_URL = "https://dummyjson.com/"
-
-    val apiService: YoutuberApiService by lazy {
+    val instance: YoutuberApiService by lazy {
         Retrofit.Builder()
-            .baseUrl(BASE_URL)
+            .baseUrl("https://tu-url-de-la-api.com/") // Reemplaza con tu URL base real
             .addConverterFactory(GsonConverterFactory.create())
             .build()
             .create(YoutuberApiService::class.java)

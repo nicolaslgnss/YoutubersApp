@@ -10,5 +10,6 @@ data class YoutuberEntity(
     val name: String,
     val description: String,
     val canalUrl: String,
-    val subscribers: String
+    val subscribers: String,
+    val categoria: String
 )

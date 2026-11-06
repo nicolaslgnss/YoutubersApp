@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.example.youtubersapp.R
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
@@ -11,6 +12,7 @@ import com.google.android.material.textfield.TextInputLayout
 class LoginActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        installSplashScreen()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
@@ -28,6 +30,13 @@ class LoginActivity : AppCompatActivity() {
                 tilNombre.error = "!Debes escribir un nombre para continuar!"
             } else {
                 tilNombre.error = null // Limpiamos el error si todo está correcto
+
+                // --- Guardar sesión con SHAREDREFERENCES ---
+                val sharedPreferences = getSharedPreferences("SesionApp", MODE_PRIVATE)
+                val editor = sharedPreferences.edit()
+                editor.putString("USER_NAME", nombreUsuario)
+                editor.apply()
+
 
                 // 4. Creamos el Intent para saltar a la MainActivity enviando el nombre
                 val intent = Intent(this, MainActivity::class.java).apply {

@@ -12,6 +12,7 @@
         <!-- Pantalla de Login / Bienvenida como INICIAL (LAUNCHER) -->
         <activity
             android:name=".activity.LoginActivity"
+            android:theme="@style/Theme.App.Starting"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

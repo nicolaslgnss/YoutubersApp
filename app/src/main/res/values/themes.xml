@@ -4,4 +4,14 @@
         <item name="colorPrimaryDark">#121212</item>
         <item name="colorAccent">#00E676</item>
     </style>
+
+    <!-- Nuevo estilo para la pantalla de bienvenida -->
+    <style name="Theme.App.Starting" parent="Theme.SplashScreen">
+        <!-- Color de fondo de la pantalla de carga (lo ponemos en blanco o negro, como prefieras) -->
+        <item name="windowSplashScreenBackground">@color/white</item>
+        <!-- El icono que acabamos de crear -->
+        <item name="windowSplashScreenAnimatedIcon">@mipmap/ic_launcher</item>
+        <!-- El tema al que saltará la app una vez termine de cargar -->
+        <item name="postSplashScreenTheme">@style/Theme.YoutubersApp</item>
+    </style>
 </resources>

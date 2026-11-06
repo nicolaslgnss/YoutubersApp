@@ -1,5 +1,6 @@
 package com.example.youtubersapp.activity
 
+import android.app.AlertDialog
 import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
@@ -9,11 +10,16 @@ import android.widget.EditText
 import android.widget.SearchView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.youtubersapp.R
 import com.example.youtubersapp.Youtuber
 import com.example.youtubersapp.adapter.YoutuberAdapter
+import com.example.youtubersapp.data.network.RetrofitClient
 import com.example.youtubersapp.databinding.ActivityMainBinding
+import kotlinx.coroutines.launch
+import java.io.IOException
 
 class MainActivity : AppCompatActivity() {
 
@@ -22,6 +28,9 @@ class MainActivity : AppCompatActivity() {
     private lateinit var adapter: YoutuberAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        // 1. Activamos la pantalla de bienvenida oficial
+        installSplashScreen()
+
         super.onCreate(savedInstanceState)
 
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -73,6 +82,9 @@ class MainActivity : AppCompatActivity() {
         adapter = YoutuberAdapter(listaYoutubers)
         binding.recyclerViewYoutubers.layoutManager = LinearLayoutManager(this)
         binding.recyclerViewYoutubers.adapter = adapter
+
+        // Llamamos a la API de forma segura al abrir la pantalla
+        cargarYoutubersDesdeApi()
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -114,6 +126,27 @@ class MainActivity : AppCompatActivity() {
         binding.recyclerViewYoutubers.adapter = YoutuberAdapter(listaFiltrada)
     }
 
+    // Función segura para manejar la red y llamadas con Retrofit
+    private fun cargarYoutubersDesdeApi() {
+        lifecycleScope.launch {
+            try {
+                val response = RetrofitClient.instance.getYoutubers()
+
+                if (response.isSuccessful) {
+                    val listaApi = response.body()
+                    Toast.makeText(this@MainActivity, "¡Datos de la API cargados con éxito!", Toast.LENGTH_SHORT).show()
+                } else {
+                    Toast.makeText(this@MainActivity, "Error en el servidor (Código: ${response.code()})", Toast.LENGTH_SHORT).show()
+                }
+
+            } catch (e: IOException) {
+                Toast.makeText(this@MainActivity, "Error de red. Comprueba tu conexión a internet.", Toast.LENGTH_LONG).show()
+            } catch (e: Exception) {
+                Toast.makeText(this@MainActivity, "Ocurrió un error inesperado: ${e.localizedMessage}", Toast.LENGTH_SHORT).show()
+            }
+        }
+    }
+
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             R.id.action_settings -> {
@@ -125,10 +158,24 @@ class MainActivity : AppCompatActivity() {
                 true
             }
             R.id.action_logout -> {
-                // Lógica para cerrar sesión (vuelve al Login y cierra esta pantalla)
-                val intent = Intent(this, LoginActivity::class.java)
-                startActivity(intent)
-                finish()
+                AlertDialog.Builder(this)
+                    .setTitle("Cerrar sesión")
+                    .setMessage("¿Estás seguro de que quieres salir de la aplicación?")
+                    .setPositiveButton("Sí") { dialog, _ ->
+                        // Borramos los datos de SharedPreferences al cerrar sesión
+                        val sharedPreferences = getSharedPreferences("SesionApp", MODE_PRIVATE)
+                        sharedPreferences.edit().clear().apply()
+
+                        val intent = Intent(this, LoginActivity::class.java)
+                        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                        startActivity(intent)
+                        finish()
+                        dialog.dismiss()
+                    }
+                    .setNegativeButton("Cancelar") { dialog, _ ->
+                        dialog.dismiss()
+                    }
+                    .show()
                 true
             }
             else -> super.onOptionsItemSelected(item)
